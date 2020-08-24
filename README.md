@@ -13,7 +13,10 @@
   - [About this Document](#about-this-document)
   - [XML and XSD Examples](#xml-and-xsd-examples)
 - [Description](#description)
-- [XSD Definition](#xsd-definition)
+- [Domain Creation, Maintenance and Deletion](#domain-creation-maintenance-and-deletion)
+- [Contact Creation, Maintenance and Deletion](#contact-creation-maintenance-and-deletion)
+- [Host Creation, Maintenance and Deletion](#host-creation-maintenance-and-deletion)
+- [Visibility of Client ID](#visibility-of-client-id)
 - [References](#references)
 
 <!-- /MarkdownTOC -->
@@ -52,6 +55,7 @@ As for the proposal for support for the EPP transfer command, described in the R
 
 The goal is to support the standard to the extent possible. Changing the behavior might not suit everybody and this proposal aims to address this particular challenge.
 
+<a id="domain-creation-maintenance-and-deletion"></a>
 ## Domain Creation, Maintenance and Deletion
 
 The default behavior of the EPP `create domain` command as described in [RFC:5731][RFC5731], will attach the client-ID (`CLID`) of the authenticated party to the object created.
@@ -74,6 +78,7 @@ These settings are controlling the account as a whole for all relevant commands.
 - `create contact`, described below
 - `create host`, described below
 
+<a id="contact-creation-maintenance-and-deletion"></a>
 ## Contact Creation, Maintenance and Deletion
 
 The default behavior of the EPP `create contact` command as described in [RFC:5733][RFC5733], will attach the client-ID (`CLID`) of the authenticated party to the object created, just as for the domain creation described above.
@@ -100,6 +105,7 @@ The following contact types are also limited, due to the VAT number validation:
 
 All other types has to be maintained by the sponsoring client, with the exception of the name attribute.
 
+<a id="host-creation-maintenance-and-deletion"></a>
 ## Host Creation, Maintenance and Deletion
 
 The default behavior of the EPP `create host` command as described in [RFC:5732][RFC5732], will attach the client-ID (`CLID`) of the authenticated party to the object created.
@@ -114,6 +120,7 @@ If the name server responsible is allocated to the registrar account (group), th
 
 The deletion of host objects are under a similar regime, as specified in [the DK Hostmaster EPP Service specification](https://github.com/DK-Hostmaster/epp-service-specification#delete-host).
 
+<a id="visibility-of-client-id"></a>
 ## Visibility of Client ID
 
 As specified in [RFC:5731][RFC5731], [RFC:5732][RFC:5732] and [RFC:5733][RFC:5733] the info commands all display a reference  sponsoring entity.
