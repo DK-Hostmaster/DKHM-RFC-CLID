@@ -23,7 +23,7 @@
 
 This is a draft and proposal for implementation of the process for domain name and contact creation via the DK Hostmaster EPP portal/service. The specification briefly touches on the registrar portal service (RP), which mimicks the EPP service for consistency.
 
-The overall [description of the concept][CONCEPT] of the registrar model offered by DK Hostmaster A/S provided a general overview, where this RFC digs into the details of the Client-ID in the context of an implementation proposal.
+The overall [description of the concept][CONCEPT] of the registrar model offered by DK Hostmaster A/S provided as a general overview, where this RFC digs into the details of the Client-ID in the context of an implementation proposal.
 
 The registrar model offered by DK Hostmaster, gives registrars the option to manage a customer’s .dk domain name if the customer would prefer this. We call this "registrar management". Where the model to allow the customer to manage their own domain name themselves, as they do today, is referred to as "registrant management".
 
