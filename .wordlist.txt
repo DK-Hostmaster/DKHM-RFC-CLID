@@ -47,3 +47,9 @@ www
 xsi
 orderconfirmationToken
 CLID
+mimicks
+CVR
+TLD
+TLDs
+superordinate
+WHOIS

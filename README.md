@@ -23,7 +23,7 @@
 
 This is a draft and proposal for implementation of the process for domain name and contact creation via the DK Hostmaster EPP portal/service. The specification briefly touches on the registrar portal service (RP), which mimicks the EPP service for consistency.
 
-The overall [description of the concept][CONCEPT] of the registrar model offered by DK Hostmaster A/S provised a an general overview, where this RFC digs into the details of the Client-ID in the context of an implementation proposal.
+The overall [description of the concept][CONCEPT] of the registrar model offered by DK Hostmaster A/S provided a general overview, where this RFC digs into the details of the Client-ID in the context of an implementation proposal.
 
 The registrar model offered by DK Hostmaster, gives registrars the option to manage a customer’s .dk domain name if the customer would prefer this. We call this "registrar management". Where the model to allow the customer to manage their own domain name themselves, as they do today, is referred to as "registrant management".
 
@@ -104,7 +104,7 @@ All other types has to be maintained by the sponsoring client, with the exceptio
 
 The default behavior of the EPP `create host` command as described in [RFC:5732][RFC5732], will attach the client-ID (`CLID`) of the authenticated party to the object created.
 
-The `create host` command will be limited in that sense that it will not be possible to create a host object, which is subordinate to a domain name (superordinate), which is sponsered by another registrar. This limitation will only be enformed for domain names under the `.dk` TLD. All domain names under other TLDs will be subject to this limitation.
+The `create host` command will be limited in that sense that it will not be possible to create a host object, which is subordinate to a domain name (superordinate), which is sponsored by another registrar. This limitation will only be enforced for domain names under the `.dk` TLD. All domain names under other TLDs will be subject to this limitation.
 
 As for the `create domain` and `create contact` commands (above) the default behaviour can be defined in RP. Where the option "registrant management", will create host objects sponsored by DK Hostmaster instead of the registrar.
 
@@ -120,7 +120,7 @@ As specified in [RFC:5731][RFC5731], [RFC:5732][RFC:5732] and [RFC:5733][RFC:573
 
 The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across portals.
 
-The public facing interface is exprected to present the registrar relation aswell. Meaning that the information on registrar relation will be made available:
+The public facing interface is expected to present the registrar relation as well. Meaning that the information on registrar relation will be made available:
 
 - in WHOIS
 - on www.dk-hostmaster.dk
