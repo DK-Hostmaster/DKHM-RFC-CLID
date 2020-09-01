@@ -139,7 +139,7 @@ The deletion of host objects are under a similar regime, as specified in [the DK
 <a id="visibility-of-client-id"></a>
 ## Visibility of Client ID
 
-As specified in [RFC:5731][RFC5731], [RFC:5732][RFC:5732] and [RFC:5733][RFC:5733] the info commands all display a reference  sponsoring entity.
+As specified in [RFC:5731][RFC5731], [RFC:5732][RFC5732] and [RFC:5733][RFC5733] the info commands all display a reference  sponsoring entity.
 
 The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across portals.
 
