@@ -108,7 +108,7 @@ The contact object will be under the sponsoring party throughout it's _life-cycl
 
 As for the `create domain` command (above) the default behaviour can be defined in RP. Where the option "registrant management", will create contact objects sponsored by DK Hostmaster instead instead of the registrar.
 
-Deletion will not be supported and will work as it currently is implemented in the DK Hostmaster EPP service and described in the specification. See the section: "[Unimplemented commands](https://github.com/DK-Hostmaster/epp-service-specification#unimplemented-commands)" for details. Contact objects are automatically delete, under the following policy:
+Deletion will not be supported and will work as it currently is implemented in the DK Hostmaster EPP service and described in the specification. See the section: "[Unimplemented commands](https://github.com/DK-Hostmaster/epp-service-specification#unimplemented-commands)" for details. Contact objects are automatically deleted, under the following policy:
 
 - The contact object is not in use
 - It holds not roles/association with other objects
