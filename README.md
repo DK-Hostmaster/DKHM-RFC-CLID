@@ -5,8 +5,8 @@
 ![Markdownlint Action](https://github.com/DK-Hostmaster/DKHM-RFC-CLID/workflows/Markdownlint%20Action/badge.svg)
 ![Spellcheck Action](https://github.com/DK-Hostmaster/DKHM-RFC-CLID/workflows/Spellcheck%20Action/badge.svg)
 
-2020-09-19
-Revision: 1.1
+2020-11-23
+Revision: 1.2
 
 ## Table of Contents
 
@@ -35,6 +35,8 @@ The overall [description of the concept][CONCEPT] of the registrar model offered
 
 The registrar model offered by DK Hostmaster, gives registrars the option to manage a customer’s .dk domain name if the customer would prefer this. We call this "registrar management". Where the model to allow the customer to manage their own domain name themselves, as they do today, is referred to as "registrant management".
 
+The specification briefly touches on the registrar portal service (RP), which mimicks the EPP service for consistency.
+
 <a id="about-this-document"></a>
 ### About this Document
 
@@ -50,6 +52,11 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 <a id="document-history"></a>
 ### Document History
 
+- 1.2 2020-11-23
+  - Addition of additional links to resources
+  - Correction to links pointing to redundant resources
+  - Minor rephrasing and clarifications
+
 - 1.1 2020-09-19
   - Addition of disclaimer
 
@@ -61,7 +68,7 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 
 All example XML files are available in the [DK Hostmaster EPP XSD repository][DKHMXSDSPEC].
 
-The proposed extensions and XSD definitions are available in the  [3.2 candidate][DKHMXSD3.2] of the DK Hostmaster XSD, which is currently a draft and work in progress and marked as a  _pre-release_.
+The proposed implementation does not require or introduce any new extensions, meaning it adheres to the DK Hostmaster XSD specification currently in production at the time of writing.
 
 <a id="description"></a>
 ## Description
@@ -98,6 +105,8 @@ These settings are controlling the account as a whole for all relevant commands.
 - `create domain`, this section
 - `create contact`, described below
 - `create host`, described below
+
+It has been evaluated, which the default behaviour should be overridable using an extension, this has not been implemented at this time.
 
 <a id="contact-creation-maintenance-and-deletion"></a>
 ## Contact Creation, Maintenance and Deletion
@@ -146,18 +155,20 @@ The deletion of host objects are under a similar regime, as specified in [the DK
 
 As specified in [RFC:5731][RFC5731], [RFC:5732][RFC5732] and [RFC:5733][RFC5733] the info commands all display a reference  sponsoring entity.
 
-The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across portals.
+The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across all ortals.
 
-The public facing interface is expected to present the registrar relation as well. Meaning that the information on registrar relation will be made available:
+The public facing interface is expected to present the registrar relation as well. Meaning that the information on registrar relation will be made available in:
 
-- in WHOIS
-- on www.dk-hostmaster.dk
+- in WHOIS, see [DK Hostmaster WHOIS Service Specification][DKHMWHOISSPEC]
+- on www.dk-hostmaster.dk, see - [DK Hostmaster RESTful WHOIS Service Specification][DKHMWHOISRESTSPEC]
 
 <a id="references"></a>
 ## References
 
 - [DK Hostmaster EPP Service Specification][DKHMEPPSPEC]
 - [DK Hostmaster EPP Service XSD Repository][DKHMXSDSPEC]
+- [DK Hostmaster WHOIS Service Specification][DKHMWHOISSPEC]
+- [DK Hostmaster RESTful WHOIS Service Specification][DKHMWHOISRESTSPEC]
 - [RFC:5730 "Extensible Provisioning Protocol (EPP)"][RFC5730]
 - [RFC:5731 "Extensible Provisioning Protocol (EPP) Domain Name Mapping"][RFC5731]
 - [RFC:5732 "Extensible Provisioning Protocol (EPP) Host Mapping"][RFC5732]
@@ -171,7 +182,9 @@ The public facing interface is expected to present the registrar relation as wel
 [RFC5733]: https://www.rfc-editor.org/rfc/rfc5733.html
 [DKHMRFCAUTORENEW]: https://github.com/DK-Hostmaster/DKHM-RFC-AutoRenew
 [DKHMRFCTRANSFER]: https://github.com/DK-Hostmaster/DKHM-RFC-Transfer
-[DKHMXSD3.2]: https://github.com/DK-Hostmaster/epp-xsd-files/blob/master/dkhm-3.2.xsd
+[DKHMXSD4.0]: https://github.com/DK-Hostmaster/epp-xsd-files/blob/master/dkhm-4.0.xsd
 [DKHMEPPSPEC]: https://github.com/DK-Hostmaster/epp-service-specification
 [DKHMXSDSPEC]: https://github.com/DK-Hostmaster/epp-xsd-files
+[DKHMWHOISSPEC]: https://github.com/DK-Hostmaster/whois-service-specification
+[DKHMWHOISRESTSPEC]: https://github.com/DK-Hostmaster/whois-rest-service-specification
 [CONCEPT]: https://www.dk-hostmaster.dk/en/new-basis-collaboration-between-registrars-and-dk-hostmaster
