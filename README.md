@@ -86,7 +86,7 @@ The goal is to support the standard to the extent possible. Changing the behavio
 <a id="domain-creation-maintenance-and-deletion"></a>
 ## Domain Creation, Maintenance and Deletion
 
-The default behavior of the EPP `create domain` command as described in [RFC:5731][RFC5731], will attach the client-ID (`CLID`) of the authenticated party to the object created.
+The default behavior of the EPP `create domain` command as described in [RFC:5731], will attach the client-ID (`CLID`) of the authenticated party to the object created.
 
 Having the client-ID specified at this time indicates that the domain name is under registrar management from creation. To change the registrar and discontinue the registrar management will require a transfer, as described in the RFC: "[DKHM RFC for Transfer Domain EPP Command][DKHMRFCTRANSFER]".
 
@@ -111,7 +111,7 @@ It has been evaluated, which the default behaviour should be overridable using a
 <a id="contact-creation-maintenance-and-deletion"></a>
 ## Contact Creation, Maintenance and Deletion
 
-The default behavior of the EPP `create contact` command as described in [RFC:5733][RFC5733], will attach the client-ID (`CLID`) of the authenticated party to the object created, just as for the domain creation described above.
+The default behavior of the EPP `create contact` command as described in [RFC:5733], will attach the client-ID (`CLID`) of the authenticated party to the object created, just as for the domain creation described above.
 
 The contact object will be under the sponsoring party throughout it's _life-cycle_ and transfer of contact objects will not be explicitly supported. See our proposal for transfer support described in our RFC: "[DKHM RFC for Transfer Domain EPP Command][DKHMRFCTRANSFER]".
 
@@ -138,7 +138,7 @@ All other types has to be maintained by the sponsoring client, with the exceptio
 <a id="host-creation-maintenance-and-deletion"></a>
 ## Host Creation, Maintenance and Deletion
 
-The default behavior of the EPP `create host` command as described in [RFC:5732][RFC5732], will attach the client-ID (`CLID`) of the authenticated party to the object created.
+The default behavior of the EPP `create host` command as described in [RFC:5732], will attach the client-ID (`CLID`) of the authenticated party to the object created.
 
 The `create host` command will be limited in that sense that it will not be possible to create a host object, which is subordinate to a domain name (superordinate), which is sponsored by another registrar. This limitation will only be enforced for domain names under the `.dk` TLD. All domain names under other TLDs will be subject to this limitation.
 
@@ -153,7 +153,7 @@ The deletion of host objects are under a similar regime, as specified in [the DK
 <a id="visibility-of-client-id"></a>
 ## Visibility of Client ID
 
-As specified in [RFC:5731][RFC5731], [RFC:5732][RFC5732] and [RFC:5733][RFC5733] the info commands all display a reference  sponsoring entity.
+As specified in [RFC:5731], [RFC:5732] and [RFC:5733] the info commands all display a reference  sponsoring entity.
 
 The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across all ortals.
 
@@ -165,26 +165,27 @@ The public facing interface is expected to present the registrar relation as wel
 <a id="references"></a>
 ## References
 
-- [DK Hostmaster EPP Service Specification][DKHMEPPSPEC]
-- [DK Hostmaster EPP Service XSD Repository][DKHMXSDSPEC]
-- [DK Hostmaster WHOIS Service Specification][DKHMWHOISSPEC]
-- [DK Hostmaster RESTful WHOIS Service Specification][DKHMWHOISRESTSPEC]
-- [RFC:5730 "Extensible Provisioning Protocol (EPP)"][RFC5730]
-- [RFC:5731 "Extensible Provisioning Protocol (EPP) Domain Name Mapping"][RFC5731]
-- [RFC:5732 "Extensible Provisioning Protocol (EPP) Host Mapping"][RFC5732]
-- [RFC:5733 "Extensible Provisioning Protocol (EPP) Contact Mapping"][RFC5733]
-- ["DKHM RFC for handling of Automatic Renewal][DKHMRFCAUTORENEW]
-- ["DKHM RFC for Transfer Domain EPP Command][DKHMRFCTRANSFER]
+1. ["New basis for collaboration between registrars and DK Hostmaster"][CONCEPT]
+1. [DK Hostmaster EPP Service Specification][DKHMEPPSPEC]
+1. [DK Hostmaster EPP Service XSD Repository][DKHMXSDSPEC]
+1. [DK Hostmaster WHOIS Service Specification][DKHMWHOISSPEC]
+1. [DK Hostmaster RESTful WHOIS Service Specification][DKHMWHOISRESTSPEC]
+1. ["DKHM RFC for handling of Automatic Renewal][DKHMRFCAUTORENEW]
+1. ["DKHM RFC for Transfer Domain EPP Command][DKHMRFCTRANSFER]
+1. [RFC:5730 "Extensible Provisioning Protocol (EPP)"][RFC:5730]
+1. [RFC:5731 "Extensible Provisioning Protocol (EPP) Domain Name Mapping"][RFC:5731]
+1. [RFC:5732 "Extensible Provisioning Protocol (EPP) Host Mapping"][RFC:5732]
+1. [RFC:5733 "Extensible Provisioning Protocol (EPP) Contact Mapping"][RFC:5733]
 
-[RFC5730]: https://www.rfc-editor.org/rfc/rfc5730.html
-[RFC5731]: https://www.rfc-editor.org/rfc/rfc5731.html
-[RFC5732]: https://www.rfc-editor.org/rfc/rfc5732.html
-[RFC5733]: https://www.rfc-editor.org/rfc/rfc5733.html
-[DKHMRFCAUTORENEW]: https://github.com/DK-Hostmaster/DKHM-RFC-AutoRenew
-[DKHMRFCTRANSFER]: https://github.com/DK-Hostmaster/DKHM-RFC-Transfer
-[DKHMXSD4.0]: https://github.com/DK-Hostmaster/epp-xsd-files/blob/master/dkhm-4.0.xsd
+[CONCEPT]: https://www.dk-hostmaster.dk/en/new-basis-collaboration-between-registrars-and-dk-hostmaster
 [DKHMEPPSPEC]: https://github.com/DK-Hostmaster/epp-service-specification
 [DKHMXSDSPEC]: https://github.com/DK-Hostmaster/epp-xsd-files
 [DKHMWHOISSPEC]: https://github.com/DK-Hostmaster/whois-service-specification
 [DKHMWHOISRESTSPEC]: https://github.com/DK-Hostmaster/whois-rest-service-specification
-[CONCEPT]: https://www.dk-hostmaster.dk/en/new-basis-collaboration-between-registrars-and-dk-hostmaster
+[DKHMRFCAUTORENEW]: https://github.com/DK-Hostmaster/DKHM-RFC-AutoRenew
+[DKHMRFCTRANSFER]: https://github.com/DK-Hostmaster/DKHM-RFC-Transfer
+[RFC:5730]: https://www.rfc-editor.org/rfc/rfc5730.html
+[RFC:5731]: https://www.rfc-editor.org/rfc/rfc5731.html
+[RFC:5732]: https://www.rfc-editor.org/rfc/rfc5732.html
+[RFC:5733]: https://www.rfc-editor.org/rfc/rfc5733.html
+[DKHMXSD4.0]: https://github.com/DK-Hostmaster/epp-xsd-files/blob/master/dkhm-4.0.xsd
