@@ -155,7 +155,7 @@ The deletion of host objects are under a similar regime, as specified in [the DK
 
 As specified in [RFC:5731], [RFC:5732] and [RFC:5733] the info commands all display a reference  sponsoring entity.
 
-The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across all ortals.
+The same scheme will be implemented in RP and the end-user self-service portal (SB) the data presentation is consistent across all portals.
 
 The public facing interface is expected to present the registrar relation as well. Meaning that the information on registrar relation will be made available in:
 

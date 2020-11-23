@@ -53,3 +53,5 @@ TLD
 TLDs
 superordinate
 WHOIS
+RESTful
+overridable
